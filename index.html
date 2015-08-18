@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+<head>	
+	<title>Juli's Calculator</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link href='http://fonts.googleapis.com/css?family=Rock+Salt' rel='stylesheet' type='text/css'>
+</head>
+<body>
+	
+
+	<div id="calc">
+		<h1>JULI's CALCULATOR</h1>
+		<div id="display"></div>
+		<div id="numbers">
+			<div id="negM" class="button">-M</div>
+			<div id="posM" class="button">+M</div>
+			<div id="sq" class="button">^</div><br>
+			<div id="9" class="button">9</div>
+			<div id="8" class="button">8</div>
+			<div id="7" class="button">7</div><br>
+			<div id="6" class="button">6</div>
+			<div id="5" class="button">5</div>
+			<div id="4" class="button">4</div><br>
+			<div id="3" class="button">3</div>
+			<div id="2" class="button">2</div>
+			<div id="1" class="button">1</div><br>
+			<div id="0" class="button">0</div>
+			<div id="decimal" class="button">.</div>
+			<div id="clear" class="button">C</div>
+		</div>
+		<div id="operators">
+			<div id="add" class="button">+</div>
+			<div id="subtract" class="button">-</div>
+			<div id="multiply" class="button">X</div>
+			<div id="divide" class="button">/</div>
+			<div id="equals" class="button">=</div>
+		</div>
+	</div>
+
+<script type="text/javascript">
+var x;
+var y;
+
+//MAYBE END UP USING SOMETHING LIKE THIS: 
+		// var doIt = {
+		// 	"+": function(x,y) {return x+y},
+		// 	"-": function(x,y) {return x-y},
+		// 	"X": function(x,y) {return x*y},
+		// 	"/": function(y,y) {return x/y}
+		// }
+
+var operator;
+var currentOperation = 0;
+
+var display = document.getElementById('display');
+
+
+document.getElementById('add').addEventListener('click', function(){
+	operator='add';
+	this.style.backgroundColor = "gray";
+	display.innerHTML = " + ";
+});
+
+document.getElementById('subtract').addEventListener('click', function(){
+	operator='sub';
+	this.style.backgroundColor = "gray";
+	display.innerHTML = " - ";
+});
+
+document.getElementById('multiply').addEventListener('click', function(){
+	operator='mult';
+	this.style.backgroundColor = "gray";
+	display.innerHTML = " X ";
+});
+
+document.getElementById('divide').addEventListener('click', function(){
+	operator="divi";
+	this.style.backgroundColor = "gray";
+	display.innerHTML = " / ";
+});
+
+document.getElementById('9').addEventListener('click', function() {
+	display.innerHTML += 9;
+	if (operator == 'add' || operator == undefined) { currentOperation += (parseInt(display.innerHTML)); }
+		else if (operator == 'sub') { currentOperation -= 9; }
+		else if (operator == 'mult') { currentOperation *= 9; }
+		else if (operator == 'divi') { currentOperation /= 9; };
+});
+
+document.getElementById('8').addEventListener('click', function() {
+	display.innerHTML += 8;
+	if (operator == 'add' || operator == undefined) { currentOperation += 8; }
+		else if (operator == 'sub') { currentOperation -= 8; }
+		else if (operator == 'mult') { currentOperation *= 8; }
+		else if (operator == 'divi') { currentOperation /= 8; };
+});
+
+document.getElementById('7').addEventListener('click', function() {
+	display.innerHTML += 7;
+	if (operator == 'add' || operator == undefined) { currentOperation += 7; }
+		else if (operator == 'sub') { currentOperation -= 7; }
+		else if (operator == 'mult') { currentOperation *= 7; }
+		else if (operator == 'divi') { currentOperation /= 7; };
+});
+
+document.getElementById('6').addEventListener('click', function() {
+	display.innerHTML += 6;
+	if (operator == 'add' || operator == undefined) { currentOperation += 6; }
+		else if (operator == 'sub') { currentOperation -= 6; }
+		else if (operator == 'mult') { currentOperation *= 6; }
+		else if (operator == 'divi') { currentOperation /= 6; };
+});
+
+document.getElementById('5').addEventListener('click', function() {
+	display.innerHTML += 5;
+	if (operator == 'add' || operator == undefined) { currentOperation += 5; }
+		else if (operator == 'sub') { currentOperation -= 5; }
+		else if (operator == 'mult') { currentOperation *= 5; }
+		else if (operator == 'divi') { currentOperation /= 5; };
+});
+
+document.getElementById('4').addEventListener('click', function() {
+	display.innerHTML += 4;
+	if (operator == 'add' || operator == undefined) { currentOperation += 4; }
+		else if (operator == 'sub') { currentOperation -= 4; }
+		else if (operator == 'mult') { currentOperation *= 4; }
+		else if (operator == 'divi') { currentOperation /= 4; };
+});
+
+document.getElementById('3').addEventListener('click', function() {
+	display.innerHTML += 3;
+	if (operator == 'add' || operator == undefined) { currentOperation += 3; }
+		else if (operator == 'sub') { currentOperation -= 3; }
+		else if (operator == 'mult') { currentOperation *= 3; }
+		else if (operator == 'divi') { currentOperation /= 3; };
+});
+
+document.getElementById('2').addEventListener('click', function() {
+	display.innerHTML += 2;
+	if (operator == 'add' || operator == undefined) { currentOperation += 2; }
+		else if (operator == 'sub') { currentOperation -= 2; }
+		else if (operator == 'mult') { currentOperation *= 2; }
+		else if (operator == 'divi') { currentOperation /= 2; };
+});
+
+document.getElementById('1').addEventListener('click', function() {
+	display.innerHTML += 1;
+	if (operator == 'add' || operator == undefined) { currentOperation += 1; }
+		else if (operator == 'sub') { currentOperation -= 1; }
+		else if (operator == 'mult') { currentOperation *= 1; }
+		else if (operator == 'divi') { currentOperation /= 1; };
+});
+
+document.getElementById('equals').addEventListener('click', function() {
+	display.innerHTML = currentOperation
+});
+
+document.getElementById('clear').addEventListener('click', clear);
+
+function clear(){
+	display.innerHTML = "";
+	currentOperation = 0;
+	operator = undefined;
+	document.getElementById('add').style.backgroundColor = "";
+	document.getElementById('subtract').style.backgroundColor = "";
+	document.getElementById('multiply').style.backgroundColor = "";
+	document.getElementById('divide').style.backgroundColor = "";
+};
+
+
+
+
+
+
+</script>
+</body>
+</html>

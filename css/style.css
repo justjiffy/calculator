@@ -1,0 +1,61 @@
+* {
+	text-align: center;
+}
+
+body {
+	background-image: url('http://thumbs.dreamstime.com/z/math-background-8962936.jpg');
+	font-family: 'Rock Salt', cursive;
+	padding-top: 20px;
+}
+
+h1 {
+	color: white;
+	text-shadow: 4px 4px black;
+}
+
+#calc {
+	margin: 0 auto;
+	width: 400px;
+	background-color: white;
+	background: linear-gradient(#07bc9b, #005445);
+	height: 560px;
+	padding: 20px;
+	border: 5px solid white;
+	border-radius: 0px 25px 0px 25px;
+	box-shadow: 10px 10px black;
+}
+
+#numbers {
+	width: 300px;
+	float: left;
+}
+
+#operators {
+	width: 100px;
+	float: right;
+}
+.button {
+	background-color: white;
+	display: inline-block;
+	height: 70px;
+	width: 70px;
+	line-height: 70px;
+	vertical-align: center;
+	border: 1px solid black;
+	box-shadow: 3px 3px black;
+	border-radius: 50%;
+	margin: 2px;
+}
+
+#display {
+	padding-right: 10px;
+	text-align: right;
+	margin: 20px auto;
+	width: 90%;
+	background: linear-gradient(#EEEEEE, #898989);
+	border: 1px solid black;
+	line-height: 40px;
+	min-height: 40px;
+	box-shadow: 3px 3px black;
+	border-radius: 0px 10px 0px 10px;
+}

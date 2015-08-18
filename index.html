@@ -4,6 +4,7 @@
 	<title>Juli's Calculator</title>
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<link href='http://fonts.googleapis.com/css?family=Rock+Salt' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Special+Elite' rel='stylesheet' type='text/css'>
 </head>
 <body>
 	
@@ -54,34 +55,44 @@ var currentOperation = 0;
 
 var display = document.getElementById('display');
 
+function buttonAction(){
+	document.getElementById('add').style.backgroundColor = "";
+	document.getElementById('subtract').style.backgroundColor = "";
+	document.getElementById('multiply').style.backgroundColor = "";
+	document.getElementById('divide').style.backgroundColor = "";
+}
 
 document.getElementById('add').addEventListener('click', function(){
 	operator='add';
-	this.style.backgroundColor = "gray";
+	this.style.backgroundColor = '#BFBFBF';
+	setTimeout(buttonAction, 700);
 	display.innerHTML = " + ";
 });
 
 document.getElementById('subtract').addEventListener('click', function(){
 	operator='sub';
-	this.style.backgroundColor = "gray";
+	this.style.backgroundColor = '#BFBFBF';
+	setTimeout(buttonAction, 700);
 	display.innerHTML = " - ";
 });
 
 document.getElementById('multiply').addEventListener('click', function(){
 	operator='mult';
-	this.style.backgroundColor = "gray";
-	display.innerHTML = " X ";
+	this.style.backgroundColor = '#BFBFBF';
+	setTimeout(buttonAction, 700);
+	display.innerHTML = " x ";
 });
 
 document.getElementById('divide').addEventListener('click', function(){
 	operator="divi";
-	this.style.backgroundColor = "gray";
+	this.style.backgroundColor = '#BFBFBF';
+	setTimeout(buttonAction, 700);
 	display.innerHTML = " / ";
 });
 
 document.getElementById('9').addEventListener('click', function() {
 	display.innerHTML += 9;
-	if (operator == 'add' || operator == undefined) { currentOperation += (parseInt(display.innerHTML)); }
+	if (operator == 'add' || operator == undefined) { currentOperation += 9; }
 		else if (operator == 'sub') { currentOperation -= 9; }
 		else if (operator == 'mult') { currentOperation *= 9; }
 		else if (operator == 'divi') { currentOperation /= 9; };

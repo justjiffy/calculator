@@ -9,17 +9,18 @@ body {
 }
 
 h1 {
+	font-size: 34px;
+	line-height: 36px;
 	color: white;
 	text-shadow: 4px 4px black;
 }
 
 #calc {
 	margin: 0 auto;
-	width: 400px;
+	width: 420px;
 	background-color: white;
 	background: linear-gradient(#07bc9b, #005445);
-	height: 560px;
-	padding: 20px;
+	height: 600px;
 	border: 5px solid white;
 	border-radius: 0px 25px 0px 25px;
 	box-shadow: 10px 10px black;
@@ -28,11 +29,12 @@ h1 {
 #numbers {
 	width: 300px;
 	float: left;
+	display: inline;
 }
 
 #operators {
 	width: 100px;
-	float: right;
+	display: inline;
 }
 .button {
 	background-color: white;
@@ -43,12 +45,14 @@ h1 {
 	vertical-align: center;
 	border: 1px solid black;
 	box-shadow: 3px 3px black;
-	border-radius: 50%;
+	border-radius: 0% 20%;
 	margin: 2px;
 }
 
 #display {
-	padding-right: 10px;
+	font-family: 'Special Elite', cursive;
+	font-size: 28px;
+	padding: 5px 10px 0px 0px;
 	text-align: right;
 	margin: 20px auto;
 	width: 90%;

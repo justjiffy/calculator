@@ -9,7 +9,7 @@ body {
 }
 
 h1 {
-	font-size: 34px;
+	font-size: 36px;
 	line-height: 36px;
 	color: white;
 	text-shadow: 4px 4px black;
@@ -27,15 +27,12 @@ h1 {
 }
 
 #numbers {
-	width: 300px;
+	width: 400px;
 	float: left;
 	display: inline;
+	margin-left: 10px;
 }
 
-#operators {
-	width: 100px;
-	display: inline;
-}
 .button {
 	background-color: white;
 	display: inline-block;
